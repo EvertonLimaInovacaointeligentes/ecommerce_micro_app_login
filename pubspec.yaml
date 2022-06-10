@@ -12,6 +12,7 @@ dependencies:
 
 
   cupertino_icons: ^1.0.2
+  lottie: ^0.8.0-nullsafety.2
   ecommerce_micro_core:
     path: ../ecommerce_micro_core
 
