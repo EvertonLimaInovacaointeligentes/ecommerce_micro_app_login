@@ -44,10 +44,10 @@ class _SplashPageState extends State<SplashPage> {
                     alignment: Alignment.center,
                   ),
                 ),
-                Text(
+                const Text(
                   'Estudo de Revisão flutter Everton Lima',
                   style: TextStyle(fontSize: 20.0),
-                )
+                ),
               ],
             ),
           ),

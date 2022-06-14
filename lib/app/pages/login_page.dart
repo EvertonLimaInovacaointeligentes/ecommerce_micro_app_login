@@ -6,11 +6,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  String _appName = const String.fromEnvironment('DEFINE_APP_NAME');
 
-  String _suffixName = const String.fromEnvironment('DEFINE_SUFFIX_NAME');
-
-  String _server = const String.fromEnvironment('DEFINE_SERVER');
   final _formkey = GlobalKey<FormState>();
   final _txtLogin = TextEditingController();
   final _txtSenha = TextEditingController();
@@ -44,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 20.0,
               ),
               TextFormField(
@@ -62,7 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   errorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30),
-                    borderSide: BorderSide(color: Colors.deepOrange),
+                    borderSide: const BorderSide(color: Colors.deepOrange),
                   ),
                   isDense: true,
                 ),
@@ -79,7 +75,7 @@ class _LoginPageState extends State<LoginPage> {
                   loginDigitado = value;
                 },
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20.0,
               ),
               TextFormField(
@@ -88,19 +84,19 @@ class _LoginPageState extends State<LoginPage> {
                 enableSuggestions: false,
                 autocorrect: false,
                 decoration: InputDecoration(
-                  icon: Icon(Icons.lock),
+                  icon: const Icon(Icons.lock),
                   labelText: 'senha',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30),
-                    borderSide: BorderSide(color: Colors.green),
+                    borderSide: const BorderSide(color: Colors.green),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30),
-                    borderSide: BorderSide(color: Colors.blue),
+                    borderSide: const BorderSide(color: Colors.blue),
                   ),
                   errorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30),
-                    borderSide: BorderSide(color: Colors.deepOrange),
+                    borderSide: const BorderSide(color: Colors.deepOrange),
                   ),
                   isDense: true,
                 ),
@@ -117,7 +113,7 @@ class _LoginPageState extends State<LoginPage> {
                   loginDigitado = value;
                 },
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               ElevatedButton(
