@@ -1,4 +1,6 @@
+import 'package:ecommerce_micro_app_login/app/controllers/login_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -10,7 +12,7 @@ class _LoginPageState extends State<LoginPage> {
   final _formkey = GlobalKey<FormState>();
   final _txtLogin = TextEditingController();
   final _txtSenha = TextEditingController();
-  //var _controller = GetIt.I.get<LoginController>();
+  var _controller = LoginController();//GetIt.I.get<LoginController>();
 
   String? loginDigitado;
   String? senhaDigitada;
@@ -117,18 +119,18 @@ class _LoginPageState extends State<LoginPage> {
                 height: 20,
               ),
               ElevatedButton(
-                onPressed: () {
+                onPressed: (){
                   //
-                  /*setState(() {
+                  setState(() async {
                     var formValid = _formkey.currentState?.validate() ?? false;
                     var message = 'Formulario invalido';
                     if (formValid) {
                       message = 'Bem vindo, ';
                     }
-                    logou =
-                        _controller.getLogin(_txtLogin.text, _txtSenha.text);
-                    if(logou?.username!='') {
-                      message+=logou!.username + "!";
+                     bool logou = await
+                        _controller.Login(_txtLogin.text, _txtSenha.text);
+                    if(logou==true) {
+                      message+=_txtLogin.text + "!";
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                           content: Text(message)));
                       Future.delayed(Duration(seconds: 5)).whenComplete(
@@ -141,7 +143,7 @@ class _LoginPageState extends State<LoginPage> {
                           content: Text(message)));
 
                     }
-                  });*/
+                  });
                 },
                 child: Text('Acessar'),
               ),
