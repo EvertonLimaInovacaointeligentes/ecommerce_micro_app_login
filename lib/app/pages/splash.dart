@@ -27,12 +27,12 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: Container(
-        alignment: Alignment.center,
-        child: SingleChildScrollView(
-          child: Container(
+    return Scaffold(
+      body: Container(
+        color: Colors.white,
+        child: Container(
+          alignment: Alignment.center,
+          child: SingleChildScrollView(
             child: Column(
               children: [
                 Center(
